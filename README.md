@@ -1,4 +1,4 @@
-![image](https://github.com/SwagPeetLiu/P2P-File-Transmission-Project-academic-/assets/111214651/85a040cd-d89d-4948-a366-e616b63691a4)![image](https://github.com/SwagPeetLiu/P2P-File-Transmission-Project-academic-/assets/111214651/0e43e256-58dd-47b9-814d-a8b56635708e)# Download Implementation & rationale for download block ordering
+# Download Implementation & rationale for download block ordering
 -> My P2P downloading strategy involves pre-sorting of the available resources before deciding which Peer to download from.
 1.	Any downloading process starts with a corresponding LookUpRequest with the index server to obtain all the sharing peers that provide uploading services to such file hash (i.e., provided matching fileMd5 is essentially matching the content of the file).
 2.	Then, we will delegate a EchoDownloader (derived class of Thread) to process the hitting IndexElements by sending a DownloadRequest(message) all the sharers and expecting to receive a DownloadReply message that contains their sharing status (i.e., Seed or P2P Downloading) and their block availabilities.
